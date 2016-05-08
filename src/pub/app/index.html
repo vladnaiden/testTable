@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title></title>
+	<!-- STYLE / THEME -->
+		<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
+
+	<!-- LIBRARIES -->
+<!-- 		<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-sanitize.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+		
+	<!-- Scripts -->
+		<!-- <script type="text/javascript" src="./js/app.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script> -->
+
+	<!-- Services -->
+		<!-- <script type="text/javascript" src="services/tableService.js"></script> -->
+
+	<!-- Directives -->
+		<!-- <script type="text/javascript" src="directives/tableDirective.js"></script> -->
+
+	<!-- Controllers -->
+		<!-- <script type="text/javascript" src="controllers/tableCtrl.js"></script> -->
+
+	<link rel="stylesheet" href="./views/css/vendor.css" />
+	<link rel="stylesheet" href="./views/css/app.css" />
+	<script type="text/javascript" src="./views/js/vendor.js"></script>
+    <script type="text/javascript" src="./views/js/app.js"></script>
+	
+</head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<body>
+	<div ng-controller="TableController" class="wrapper">
+			<table class="table table-striped" tb-col cols="colorData" id="racetimes"></table>
+	</div>
+</body>
+</html>

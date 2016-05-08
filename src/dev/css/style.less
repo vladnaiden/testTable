@@ -1,0 +1,100 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+@head-color:hsla(12, 100%, 40%, 0.5);
+@one-color: hsla(50, 50%, 80%, 0.7);
+@two-color:hsla(113, 50%, 50%, 1);
+.gradient() {
+	background: linear-gradient(#aaa 1%, 100%, #000);
+    background: -o-linear-gradient(#aaa 1%, 100%, #000); 
+    background: -ms-linear-gradient(#aaa 1%, 100%, #000); 
+    background: -moz-linear-gradient(#aaa 1%, 100%, #000); 
+    background: -webkit-linear-gradient(#aaa 1%, 100%, #000); 
+}
+.transform(@var) {
+	-ms-transform: @var;
+	-webkit-transform: @var;
+	transform: @var;
+}
+
+* {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+body {
+    .gradient(); 
+}
+h1,
+table {
+    text-align: center;
+}
+tr {
+    background: @two-color;
+}
+tr:first-child {
+    background: @head-color;
+}
+tr:nth-child(even) {
+    background: @one-color;
+}
+td:empty {
+    background: @two-color;
+}
+tr:hover:not(#firstrow),
+tr:hover td:empty {
+    background: @two-color;
+    pointer-events: visible;
+}
+tr:hover:not(#firstrow) {
+    .transform(scale(1.01));
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+}
